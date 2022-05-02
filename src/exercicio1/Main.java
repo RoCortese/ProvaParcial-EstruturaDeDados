@@ -13,7 +13,7 @@ public class Main {
 		lista.inserir(6, "amarelo");
 		
 		// impressão dos objetos inseridos na lista
-		
+		lista.imprimir();
 
 	}
 }

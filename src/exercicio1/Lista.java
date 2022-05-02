@@ -17,23 +17,30 @@ public class Lista {
 	private void inserirPrioridade(No aux) {
 		if(inicio == null){
 			inicio = aux;
+			fim = aux;
+
 		} else {
-			if(inicio.cor != aux.cor){
-				No fim = inicio;
-				inicio = aux;
-				aux.prox = fim;
-				
+			if(fim.cor.equals(aux.cor)) {
+
 			} else {
-				No x = inicio;
-					while(x.prox.cor == aux.cor){
-						x = x.prox;
-
-					}
-
-				No y = x.prox;
-				x.prox = aux;
-				aux.prox = y;
-
+				No verde = null;
+				if(inicio.cor.equals(aux.cor)){
+					No amarelo = inicio;
+	
+						while(amarelo.prox.cor.equals(aux.cor)){
+							amarelo = amarelo.prox;
+	
+						}
+	
+					verde = amarelo.prox;
+					amarelo.prox = aux;
+					aux.prox = verde;
+	
+				} else {
+					verde = inicio;
+					inicio = aux;
+					aux.prox = verde;
+				}
 			}
 		}
 	}

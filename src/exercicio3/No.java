@@ -8,5 +8,6 @@ public class No {
 	
 	public No(int dado) {
 		this.dado = dado;
+		
 	}
 }

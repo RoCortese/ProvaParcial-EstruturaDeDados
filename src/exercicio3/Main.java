@@ -20,6 +20,16 @@ public class Main {
 	}
 	
 	public static void inverter(Lista lista) {
-		
+		Lista invertida = new Lista();
+		No aux = lista.fim;
+		boolean iterando = true;
+		while (iterando) {
+			invertida.inserir(aux.dado);
+			aux = aux.esq;
+			
+			if(aux==null) {
+				iterando = false;
+			}
+		}
 	}
 }
